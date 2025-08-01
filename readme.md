@@ -78,8 +78,6 @@ HEYGEN_TEMPLATE_ID="TU_TEMPLATE_ID_REAL"
 Una vez que hayas completado la instalación y configuración, puedes ejecutar el script con el siguiente comando:
 
 ```bash
-node generateVideos.js
+npm start
 ```
-*(Asumiendo que el script principal se llama `generateVideos.js`)*
-
 El script mostrará en la consola el progreso y, al finalizar, habrá creado el archivo `videos_generados_log.csv` con los resultados.
