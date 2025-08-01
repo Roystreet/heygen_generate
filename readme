@@ -37,7 +37,7 @@ Sigue estos pasos para configurar el proyecto en tu entorno local.
 
 **1. Instala las Dependencias**
 ```bash
-npm install axios dotenv papaparse csv-writer
+npm install
 ```
 
 **2. Prepara el Archivo de Datos de Entrada (`alumnos.csv`)**
