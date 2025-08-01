@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const Papa = require('papaparse'); // 1. Importa Papa Parse
+const Papa = require('papaparse');
 const { createObjectCsvWriter } = require('csv-writer');
 const { generateVideoFromTemplate } = require('./heygenService');
 
@@ -8,13 +8,11 @@ async function main() {
     const inputCsvPath = path.resolve(__dirname, 'alumnos.csv');
     const outputCsvPath = path.resolve(__dirname, 'videos_generados_log.csv');
 
-    // --- Leer el archivo CSV de estudiantes con Papa Parse ---
     console.log(`Leyendo estudiantes desde: ${inputCsvPath}`);
     let students = [];
     try {
         const fileContent = fs.readFileSync(inputCsvPath, 'utf8');
 
-        // 2. Usa Papa.parse en lugar del stream
         const results = Papa.parse(fileContent, {
             header: true,             // Usa la primera fila como encabezados
             skipEmptyLines: true,     // Salta líneas vacías
@@ -31,7 +29,6 @@ async function main() {
         process.exit(1);
     }
 
-    // --- El resto de tu lógica para generar videos no necesita cambios ---
     const videoResults = [];
 
     for (const studentName of students) {
@@ -52,7 +49,6 @@ async function main() {
         }
     }
 
-    // --- Escribir los resultados en el nuevo CSV (sin cambios) ---
     if (videoResults.length > 0) {
         console.log(`\nEscribiendo resultados en: ${outputCsvPath}`);
         const csvWriter = createObjectCsvWriter({
