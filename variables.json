@@ -1,0 +1,11 @@
+{
+    "variables": {
+        "nombre_alumno": {
+            "name": "nombre_alumno",
+            "type": "text",
+            "properties": {
+                "content": "Roiner bracamonte"
+            }
+        }
+    }
+}

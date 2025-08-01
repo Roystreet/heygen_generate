@@ -1,0 +1,15 @@
+# Dependencias de Node.js
+node_modules/
+
+# Archivos de log y temporales
+*.log
+npm-debug.log*
+
+# Archivo de variables de entorno
+# ¡IMPORTANTE! Contiene claves secretas.
+.env
+
+# Archivos de salida generados por el script
+videos_generados_log.csv
+
+alumnos.csv
